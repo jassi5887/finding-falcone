@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(to right,
+    rgba($color-primary, .8), 
+    rgba($color-secondary, .8));
+
+  &__logo{
+    font-size: 1.8rem;
+    color: $color-secondary-lighter;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+  }
+
+  &__item {
+    & > a {
+      color: $color-secondary-dark;
+      font-weight: 700;
+      font-size: 1.4rem;
+      cursor: pointer;
+      letter-spacing: .3rem;
+    }
+  }
+}

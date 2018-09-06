@@ -1,0 +1,49 @@
+.vehicles {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  width: 80%;
+  box-shadow: 0 2rem 4rem rgba($color-primary, .4);
+  padding: 3rem;
+  margin-top: 2rem;
+
+  &__vehicle {
+    &__labels {
+      display: flex;
+      width: 100%;      
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    &__label {
+      text-align: left;
+      flex: 1;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    &__values {
+      display: flex;
+      width: 100%;  
+      justify-content: space-between;
+      padding: 1rem;
+      font-size: 1.3rem;
+
+      &:nth-child(odd) {
+        background-color: rgba($color-secondary, .5);
+      }
+
+      &:nth-child(even) {
+        background-color: rgba($color-secondary-lighter, .2);
+      }
+    }
+
+    &__value {
+      text-align: left;
+      flex: 1;
+    }
+  }
+}

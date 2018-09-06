@@ -1,0 +1,23 @@
+<h3 class="title center" *ngIf="!maxedOut">Select Planets to Assign vehicles</h3>
+<h3 class="title center" *ngIf="maxedOut">All 4 planets have vehicles assigned</h3>
+<h3 class="title center" *ngIf="estimatedTime > 0">Estimated Time to reach: {{ estimatedTime }}</h3>
+
+<div class="selectedPlanets">
+  <div class="selectedPlanets__planet" *ngFor="let planet of selectedPlanets">
+    <b>{{ planet.planet.name }}</b>: {{ planet.vehicle.name }}
+  </div>
+</div>
+<button 
+  *ngIf="maxedOut" 
+  (click)="onSendTroups()"
+  class="button button--rounded button--primary button--centered">
+  Send Troups
+</button>
+<div class="planets">
+  <a routerLinkActive="planets__planet--active" [routerLink]="[planet.name]" class="planets__planet" *ngFor="let planet of planets">
+    {{ planet.name }}
+    <p>{{ planet.distance }} KM</p>
+  </a>
+</div>
+
+<router-outlet></router-outlet>

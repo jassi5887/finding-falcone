@@ -1,0 +1,16 @@
+@import './sass/abstract/variables';
+@import './sass/abstract/mixins';
+
+@import './sass/base/base';
+
+@import './sass/components/loader';
+@import './sass/components/header';
+@import './sass/components/section';
+@import './sass/components/button';
+@import './sass/components/footer';
+
+@import './sass/utils/utils';
+
+@import './sass/pages/planets';
+@import './sass/pages/vehicle';
+@import './sass/pages/result';

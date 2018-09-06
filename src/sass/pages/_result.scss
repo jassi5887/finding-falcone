@@ -1,0 +1,19 @@
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 40rem;
+  padding: 2rem 4rem;
+  background-color: $color-secondary-lighter;
+  color: $color-secondary-dark;
+  font-size: 1.6rem;
+  letter-spacing: .3rem;
+  border-radius: 2rem;
+  box-shadow: 0 .4rem 1rem rgba($color-secondary, .8);
+
+  @include respond(phone) {
+    width: 75%;
+  }
+}

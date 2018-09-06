@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  padding: 2rem 4rem;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: transform .4s;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+  }
+
+  &--rounded {
+    border-radius: 100rem;
+  }
+
+  &--centered {
+    margin: 0 auto;
+  }
+}

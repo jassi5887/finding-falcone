@@ -1,0 +1,6 @@
+<app-header class="header"></app-header>
+<app-mission-statement *ngIf="!isAuthorized"></app-mission-statement>
+<router-outlet></router-outlet>
+<app-footer class="footer"></app-footer>
+
+<app-loader [loaderMessage]="loaderMessage" *ngIf="showLoader" class="loader"></app-loader>

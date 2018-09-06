@@ -1,0 +1,25 @@
+<div class="vehicles">
+  <h3 class="title">Select Vehicle to send to <strong>{{ selectedPlanet?.name }}</strong></h3>
+  <div class="vehicles__vehicle__labels">
+    <div class="vehicles__vehicle__label">name</div>
+    <div class="vehicles__vehicle__label"># Vehicles</div>
+    <div class="vehicles__vehicle__label">Max Distance</div>
+    <div class="vehicles__vehicle__label">Speed</div>
+    <div class="vehicles__vehicle__label">Select</div>
+  </div>
+  <div class="vehicles__vehicle__values" *ngFor="let vehicle of allVehicles">
+    <div class="vehicles__vehicle__value">{{ vehicle.name }}</div>
+    <div class="vehicles__vehicle__value">{{ vehicle.total_no }}</div>
+    <div class="vehicles__vehicle__value">{{ vehicle.max_distance }}</div>
+    <div class="vehicles__vehicle__value">{{ vehicle.speed }}</div>
+    <div class="vehicles__vehicle__value">
+      <input 
+        id="{{vehicle.name}}" 
+        type="checkbox" 
+        *ngIf="selectedForThisPlanet?.name === vehicle.name || vehicle.total_no > 0"
+        [disabled]="selectedPlanet.distance > vehicle.max_distance"
+        [checked]="selectedForThisPlanet?.name === vehicle.name"
+        (change)="onSelectVehicle($event,vehicle, selectedPlanet)">
+    </div>
+  </div>
+</div>

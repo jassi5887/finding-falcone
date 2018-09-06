@@ -1,0 +1,5 @@
+<div class="result">
+  <p>{{ message }}</p><br><br>
+  <button class="button button--rounded button--primary" (click)="findAgain()" *ngIf="status === 'failed'">Find Again</button>
+  <button class="button button--rounded button--primary" (click)="reAuthorize()" *ngIf="status === 'error'">Ask For Permission</button>
+</div>

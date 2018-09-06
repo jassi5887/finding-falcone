@@ -1,0 +1,61 @@
+.planets {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  margin-top: 2rem;
+
+  width: 100%;
+  &__planet {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba($color-secondary, .7);
+    flex: 1;
+    color: $color-secondary-lighter;
+    font-size: 1.4rem;
+    cursor: pointer;
+    letter-spacing: .3rem;
+    font-weight: 700;
+    white-space: nowrap;
+    position: relative;
+
+    & > p {
+      font-weight: 400;
+    }
+
+    &:not(:first-child) {
+      border-left: 1px solid $color-secondary-lighter;
+    }
+
+    &--active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 0; 
+      height: 0; 
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-bottom: 1rem solid #fff;
+    }
+  }
+}
+
+.selectedPlanets {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  &__planet {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+    background-color: $color-secondary;
+    color: white;
+    border-radius: 100rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
